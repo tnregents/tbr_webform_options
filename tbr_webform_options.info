@@ -1,0 +1,9 @@
+name = "TBR Webform Options"
+description = "Adds pre-defined options for webform specific to TBR"
+dependencies[] = webform
+package = "TBR"
+core = 7.x
+version = "7.x-1.0"
+project = "tbr_webform_options"
+
+files[] = tbr_webform_options.module

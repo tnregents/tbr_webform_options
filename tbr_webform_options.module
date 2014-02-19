@@ -1,0 +1,152 @@
+<?php
+/**
+ * Implementation of hook_webform_select_options_info().
+ * See webform/webform_hooks.php for further information on this hook in the Webform API.
+ */
+function tbr_webform_options_webform_select_options_info() {
+    $items = array();
+    
+    $items['universitites'] = array(
+        'title' => t('Universities'),
+        'options callback' => 'tbr_webform_options_universitites'
+    );
+    
+    $items['commcolleges'] = array(
+        'title' => t('Community Colleges'),
+        'options callback' => 'tbr_webform_options_commcolleges'
+    );
+    
+    $items['tcats'] = array(
+        'title' => t('Colleges of Applied Technology'),
+        'options callback' => 'tbr_webform_options_tcats'
+    );
+    $items['tbrall'] = array(
+        'title' => t('All TBR Campuses'),
+        'options callback' => 'tbr_webform_options_tbrall'
+    );
+
+   return $items;
+}
+
+
+/**
+ * Build an options list to be used with webforms select list based in drupal roles
+ */
+function tbr_webform_options_universitites() {
+    $contentarray = array();    
+	$contentarray['apsu'] = t("Austin Peay State University");
+	$contentarray['etsu'] = t("East Tennessee State University");
+	$contentarray['mtsu'] = t("Middle Tennessee State University");
+	$contentarray['tsu'] = t("Tennessee State University");
+	$contentarray['ttu'] = t("Tennessee Tech University");
+	$contentarray['uofm'] = t("University of Memphis");
+
+    return $contentarray;
+}
+
+function tbr_webform_options_commcolleges() {  
+    $contentarray = array();
+	$contentarray['chscc'] = t("Chattanooga State Community College");
+	$contentarray['clscc'] = t("Cleveland State Community College");
+	$contentarray['coscc'] = t("Columbia State Community College");
+	$contentarray['dscc'] = t("Dyersburg State Community College");
+	$contentarray['jscc'] = t("Jackson State Community College");
+	$contentarray['mscc'] = t("Motlow State Community College");
+	$contentarray['nascc'] = t("Nashville State Community College");
+	$contentarray['nescc'] = t("Northeast State Community College");
+	$contentarray['pscc'] = t("Pellissippi State Community College");
+	$contentarray['rscc'] = t("Roane State Community College");
+	$contentarray['stcc'] = t("Southwest Tennessee Community College");
+	$contentarray['vscc'] = t("Volunteer State Community College");
+	$contentarray['wscc'] = t("Walters State Community College");
+
+    return $contentarray;
+}
+
+function tbr_webform_options_tcats() {  
+    $contentarray = array();
+	$contentarray['tcatchscc'] = t("Chattanooga State Community College");
+	$contentarray['tcatathens'] = t("Athens");
+	$contentarray['tcatchattanooga'] = t("Chattanooga");
+	$contentarray['tcatcovington'] = t("Covington");
+	$contentarray['tcatcrossville'] = t("Crossville");
+	$contentarray['tcatcrump'] = t("Crump");
+	$contentarray['tcatdickson'] = t("Dickson");
+	$contentarray['tcatelizabethton'] = t("Elizabethton");
+	$contentarray['tcatharriman'] = t("Harriman");
+	$contentarray['tcathartsville'] = t("Hartsville");
+	$contentarray['tcathohenwald'] = t("Hohenwald");
+	$contentarray['tcatjacksboro'] = t("Jacksboro");
+	$contentarray['tcatjackson'] = t("Jackson");
+	$contentarray['tcatknoxville'] = t("Knoxville");
+	$contentarray['tcatlivingston'] = t("Livingston");
+	$contentarray['tcatmcKenzie'] = t("McKenzie");
+	$contentarray['tcatmcminnville'] = t("McMinnville");
+	$contentarray['tcatmemphis'] = t("Memphis");
+	$contentarray['tcatmorristown'] = t("Morristown");
+	$contentarray['tcatmurfreesboro'] = t("Murfreesboro");
+	$contentarray['tcatnashville'] = t("Nashville");
+	$contentarray['tcatnewbern'] = t("Newbern");
+	$contentarray['tcatoneida'] = t("Oneida");
+	$contentarray['tcatparis'] = t("Paris");
+	$contentarray['tcatpulaski'] = t("Pulaski");
+	$contentarray['tcatripley'] = t("Ripley");
+	$contentarray['tcatshelbyville'] = t("Shelbyville");
+	$contentarray['tcatwhiteville'] = t("Whiteville");
+
+    return $contentarray;
+}
+
+function tbr_webform_options_tbrall() {
+    $contentarray = array();    
+	$contentarray['apsu'] = t("Austin Peay State University");
+	$contentarray['etsu'] = t("East Tennessee State University");
+	$contentarray['mtsu'] = t("Middle Tennessee State University");
+	$contentarray['tsu'] = t("Tennessee State University");
+	$contentarray['ttu'] = t("Tennessee Tech University");
+	$contentarray['uofm'] = t("University of Memphis");
+	$contentarray['chscc'] = t("Chattanooga State Community College");
+	$contentarray['clscc'] = t("Cleveland State Community College");
+	$contentarray['coscc'] = t("Columbia State Community College");
+	$contentarray['dscc'] = t("Dyersburg State Community College");
+	$contentarray['jscc'] = t("Jackson State Community College");
+	$contentarray['mscc'] = t("Motlow State Community College");
+	$contentarray['nascc'] = t("Nashville State Community College");
+	$contentarray['nescc'] = t("Northeast State Community College");
+	$contentarray['pscc'] = t("Pellissippi State Community College");
+	$contentarray['rscc'] = t("Roane State Community College");
+	$contentarray['stcc'] = t("Southwest Tennessee Community College");
+	$contentarray['vscc'] = t("Volunteer State Community College");
+	$contentarray['wscc'] = t("Walters State Community College"); 
+    $contentarray = array();
+	$contentarray['tcatchscc'] = t("Chattanooga State Community College");
+	$contentarray['tcatathens'] = t("Athens");
+	$contentarray['tcatchattanooga'] = t("Chattanooga");
+	$contentarray['tcatcovington'] = t("Covington");
+	$contentarray['tcatcrossville'] = t("Crossville");
+	$contentarray['tcatcrump'] = t("Crump");
+	$contentarray['tcatdickson'] = t("Dickson");
+	$contentarray['tcatelizabethton'] = t("Elizabethton");
+	$contentarray['tcatharriman'] = t("Harriman");
+	$contentarray['tcathartsville'] = t("Hartsville");
+	$contentarray['tcathohenwald'] = t("Hohenwald");
+	$contentarray['tcatjacksboro'] = t("Jacksboro");
+	$contentarray['tcatjackson'] = t("Jackson");
+	$contentarray['tcatknoxville'] = t("Knoxville");
+	$contentarray['tcatlivingston'] = t("Livingston");
+	$contentarray['tcatmcKenzie'] = t("McKenzie");
+	$contentarray['tcatmcminnville'] = t("McMinnville");
+	$contentarray['tcatmemphis'] = t("Memphis");
+	$contentarray['tcatmorristown'] = t("Morristown");
+	$contentarray['tcatmurfreesboro'] = t("Murfreesboro");
+	$contentarray['tcatnashville'] = t("Nashville");
+	$contentarray['tcatnewbern'] = t("Newbern");
+	$contentarray['tcatoneida'] = t("Oneida");
+	$contentarray['tcatparis'] = t("Paris");
+	$contentarray['tcatpulaski'] = t("Pulaski");
+	$contentarray['tcatripley'] = t("Ripley");
+	$contentarray['tcatshelbyville'] = t("Shelbyville");
+	$contentarray['tcatwhiteville'] = t("Whiteville");
+
+    return $contentarray;
+}
